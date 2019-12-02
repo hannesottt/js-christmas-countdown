@@ -3,6 +3,7 @@ body {
     color: white;
     padding: 0;
     margin: 0;
+    width: 100vw;
 }
 
 span.border {
@@ -14,8 +15,8 @@ span.border {
 .bg {
     position: absolute;
     top: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-position: center;
     z-index: -1;
     overflow: hidden;
@@ -29,7 +30,7 @@ span.border {
 div.timer {
     text-align: center;
     line-height: 2em;
-    font-size: 2em;
+    font-size: 3.5vw;
     background-color: rgba(0, 0, 0, 0.75);
     width: max-content;
     padding: 10px;
@@ -45,4 +46,27 @@ span.remain {
     display: grid;
     align-items: center;
     height: 100vh;
+}
+
+br {
+    height: 0;
+}
+
+.times {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+}
+
+@media (max-width: 570px) {
+    .times {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+    div.timer {
+        font-size: 6vw;
+    }
+    span.remain {
+        font-size: 1.5em;
+    }
 }
