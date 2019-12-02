@@ -52,7 +52,7 @@ function updateTx() {
 
 function getRandomBG() {
     var rand = Math.floor(Math.random() * backgrounds.length + 1) - 1;
-    document.getElementById("bg").style.backgroundImage = "url(../img/" + backgrounds[rand] + ")"
+    document.getElementById("bg").style.backgroundImage = "url(img/" + backgrounds[rand] + ")"
 }
 
 getRandomBG();
